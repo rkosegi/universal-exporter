@@ -1,0 +1,21 @@
+<root>
+    <table>
+        <th>
+            <td>header 1</td>
+            <td>header 2</td>
+            <td>header 3</td>
+        </th>
+        <tbody>
+            <tr>
+                <td>row 1, cell 1</td>
+                <td>row 1, cell 2</td>
+                <td>row 1, cell 3</td>
+            </tr>
+            <tr>
+                <td>row 1, cell 1</td>
+                <td>row 1, cell 2</td>
+                <td>row 1, cell 3</td>
+            </tr>
+        </tbody>
+    </table>
+</root>
