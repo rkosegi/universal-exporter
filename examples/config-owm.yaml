@@ -1,0 +1,111 @@
+# Copyright 2025 Richard Kosegi
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+---
+metrics:
+  owm_current_humidity:
+    help: Current humidity
+    labels:
+      - location
+  owm_current_pressure:
+    help: Current atmospheric pressure
+    labels:
+      - location
+  owm_current_temperature:
+    help: Current temperature
+    labels:
+      - location
+  owm_current_temperature_feel:
+    help: Current temperature feel like
+    labels:
+      - location
+  owm_current_temperature_min:
+    help: Minimal currently observed temperature
+    labels:
+      - location
+  owm_current_temperature_max:
+    help: Maximal currently observed temperature
+    labels:
+      - location
+  owm_current_wind_direction:
+    help:
+    labels:
+      - location
+  owm_current_wind_speed:
+    labels:
+      - location
+  owm_exporter_api_requests:
+    labels:
+      - location
+  owm_exporter_scrapes_total:
+    help: Total number of times OWM was scraped for metrics.
+    labels:
+      - location
+targets:
+  owm_vienna:
+    steps:
+      001-set:
+        order: 1
+        set:
+          data:
+            OWM_Mapping:
+              - path: main.temp
+                metric: owm_current_temperature
+              - path: main.feels_like
+                metric: owm_current_temperature_feel
+              - path: main.temp_min
+                metric: owm_current_temperature_min
+              - path: main.temp_max
+                metric: owm_current_temperature_max
+              - path: main.pressure
+                metric: owm_current_pressure
+              - path: main.humidity
+                metric: owm_current_humidity
+              - path: wind.speed
+                metric: owm_current_wind_speed
+              - path: wind.deg
+                metric: owm_current_wind_direction
+      002-import-env:
+        order: 2
+        env:
+          include: OWM_API_KEY
+      003-fetch:
+        order: 3
+        ext:
+          func: http_fetch
+          args:
+            url: https://api.openweathermap.org/data/2.5/weather?lat={{ .vars.latitude }}&lon={{ .vars.longitude }}&units=metric&appid={{ .Env.OWM_API_KEY }}
+            headers:
+              accept: application/json
+            storeTo: Result.OWM.RAW
+            parseJson: true
+      004-process:
+        order: 4
+        forEach:
+          query: OWM_Mapping
+          action:
+            steps:
+              01-set-metric:
+                order: 1
+                ext:
+                  func: prom_gauge
+                  args:
+                    value: '{{ printf "{{ .Result.OWM.RAW.json.%s }}" .forEach.path }}'
+                    ref: '{{ .forEach.metric }}'
+                    labels:
+                      - '{{ .vars.locationLabel }}'
+
+vars:
+  locationLabel: Vienna
+  latitude: 48.20
+  longitude: 16.37
