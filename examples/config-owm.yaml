@@ -44,13 +44,6 @@ metrics:
   owm_current_wind_speed:
     labels:
       - location
-  owm_exporter_api_requests:
-    labels:
-      - location
-  owm_exporter_scrapes_total:
-    help: Total number of times OWM was scraped for metrics.
-    labels:
-      - location
 targets:
   owm_vienna:
     steps:
