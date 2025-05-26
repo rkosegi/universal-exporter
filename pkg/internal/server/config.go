@@ -33,6 +33,7 @@ func DefaultConfig() *types.Config {
 				Prefix:  lo.ToPtr(types.PromNamespace),
 			},
 			Cache: &types.CacheConfig{
+				Enabled:  lo.ToPtr(true),
 				TTL:      lo.ToPtr(types.DefaultCacheTTL),
 				Capacity: lo.ToPtr(types.DefaultCacheCapacity),
 				Instrumentation: &types.InstrumentationConfigFragment{

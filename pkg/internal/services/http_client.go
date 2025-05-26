@@ -52,9 +52,9 @@ type hcServiceImpl struct {
 	reg         prometheus.Registerer
 	hitCounter  *prometheus.CounterVec
 	missCounter *prometheus.CounterVec
-	hc          http.Client
 	counter     *prometheus.CounterVec
 	histVec     *prometheus.HistogramVec
+	hc          http.Client
 }
 
 func (h *hcServiceImpl) RoundTrip(req *http.Request) (*http.Response, error) {
@@ -65,9 +65,11 @@ func (h *hcServiceImpl) RoundTrip(req *http.Request) (*http.Response, error) {
 		err        error
 	)
 
-	if cachedResp = h.get(req.URL.String()); cachedResp != nil {
-		h.l.Debug("using cached response", "url", req.URL.String())
-		return cachedResp.AsHttpResponse(), nil
+	if *h.cfg.Cache.Enabled {
+		if cachedResp = h.get(req.URL.String()); cachedResp != nil {
+			h.l.Debug("using cached response", "url", req.URL.String())
+			return cachedResp.AsHttpResponse(), nil
+		}
 	}
 
 	c, cancel := context.WithCancel(context.TODO())
@@ -82,23 +84,27 @@ func (h *hcServiceImpl) RoundTrip(req *http.Request) (*http.Response, error) {
 		return nil, err
 	}
 
-	defer func(Body io.ReadCloser) {
-		if err = Body.Close(); err != nil {
-			h.l.Warn("unable to close response body", "err", err.Error())
+	if *h.cfg.Cache.Enabled {
+		defer func(Body io.ReadCloser) {
+			if err = Body.Close(); err != nil {
+				h.l.Warn("unable to close response body", "err", err.Error())
+			}
+		}(resp.Body)
+		_, err = io.Copy(&body, resp.Body)
+		if err != nil {
+			return nil, err
 		}
-	}(resp.Body)
-	_, err = io.Copy(&body, resp.Body)
-	if err != nil {
-		return nil, err
-	}
-	cachedResp = &types.ParsedHttpResponse{
-		StatusCode: resp.StatusCode,
-		Header:     resp.Header,
-		Body:       body.Bytes(),
+		cachedResp = &types.ParsedHttpResponse{
+			StatusCode: resp.StatusCode,
+			Header:     resp.Header,
+			Body:       body.Bytes(),
+		}
+
+		h.cache.Set(req.URL.String(), cachedResp, ttlcache.DefaultTTL)
+		return cachedResp.AsHttpResponse(), nil
 	}
 
-	h.cache.Set(req.URL.String(), cachedResp, ttlcache.DefaultTTL)
-	return cachedResp.AsHttpResponse(), nil
+	return resp, nil
 }
 
 func (h *hcServiceImpl) RoundTripper() http.RoundTripper {
@@ -106,7 +112,7 @@ func (h *hcServiceImpl) RoundTripper() http.RoundTripper {
 }
 
 func (h *hcServiceImpl) Describe(ch chan<- *prometheus.Desc) {
-	if *h.cfg.Cache.Instrumentation.Enabled {
+	if *h.cfg.Cache.Enabled && *h.cfg.Cache.Instrumentation.Enabled {
 		h.missCounter.Describe(ch)
 		h.hitCounter.Describe(ch)
 	}
@@ -117,7 +123,7 @@ func (h *hcServiceImpl) Describe(ch chan<- *prometheus.Desc) {
 }
 
 func (h *hcServiceImpl) Collect(ch chan<- prometheus.Metric) {
-	if *h.cfg.Cache.Instrumentation.Enabled {
+	if *h.cfg.Cache.Enabled && *h.cfg.Cache.Instrumentation.Enabled {
 		h.missCounter.Collect(ch)
 		h.hitCounter.Collect(ch)
 	}

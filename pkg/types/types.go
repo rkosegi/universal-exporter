@@ -76,12 +76,13 @@ type HttpClientServiceConfig struct {
 }
 
 type InstrumentationConfigFragment struct {
-	Enabled *bool   `json:"enabled" yaml:"enabled"`
-	Prefix  *string `json:"prefix" yaml:"prefix"`
+	Enabled *bool   `json:"enabled,omitempty" yaml:"enabled,omitempty"`
+	Prefix  *string `json:"prefix,omitempty" yaml:"prefix,omitempty"`
 }
 
 // CacheConfig is used to configure TTL cache for HTTP responses.
 type CacheConfig struct {
+	Enabled *bool `json:"enabled,omitempty" yaml:"enabled,omitempty"`
 	// TTL cache time-to-live
 	TTL *time.Duration `json:"ttl,omitempty" yaml:"ttl,omitempty"`
 
