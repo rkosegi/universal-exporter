@@ -51,17 +51,10 @@ func (p *MetricOptsSpec) AsOpts() prometheus.Opts {
 	}
 }
 
-type HttpFetchConfig struct {
-	Url     string
-	Headers map[string]string
-}
-
 // ScrapeTarget defines how target is being scraped
 type ScrapeTarget struct {
 	// Vars are target-specific variables that will be merged with global ones before they are used.
 	Vars map[string]string
-
-	HttpFetch *HttpFetchConfig `json:"httpFetch" yaml:"httpFetch"`
 
 	// Steps are actual pipeline steps
 	Steps pipeline.ChildActions `json:"steps,omitempty" yaml:"steps,omitempty"`
@@ -70,19 +63,28 @@ type ScrapeTarget struct {
 type HttpClientServiceConfig struct {
 	// Request timeout
 	Timeout *time.Duration `json:"timeout,omitempty" yaml:"timeout,omitempty"`
+
 	// Instrumentation enables instrumentation
 	Instrumentation *InstrumentationConfigFragment `json:"instrumentation,omitempty" yaml:"instrumentation,omitempty"`
-	Cache           *CacheConfig                   `json:"cache" yaml:"cache"`
+
+	// Cache configures HTTP response cache
+	Cache *CacheConfig `json:"cache" yaml:"cache"`
 }
 
 type InstrumentationConfigFragment struct {
-	Enabled *bool   `json:"enabled,omitempty" yaml:"enabled,omitempty"`
-	Prefix  *string `json:"prefix,omitempty" yaml:"prefix,omitempty"`
+	// Enabled specifies whether instrumentation is enabled on current configuration level.
+	Enabled *bool `json:"enabled,omitempty" yaml:"enabled,omitempty"`
+
+	// Prefix is metric name prefix for all metrics at current configuration level.
+	Prefix *string `json:"prefix,omitempty" yaml:"prefix,omitempty"`
 }
 
 // CacheConfig is used to configure TTL cache for HTTP responses.
 type CacheConfig struct {
+	// Enabled specifies whether to enable cache or not.
+	// It's enabled by default.
 	Enabled *bool `json:"enabled,omitempty" yaml:"enabled,omitempty"`
+
 	// TTL cache time-to-live
 	TTL *time.Duration `json:"ttl,omitempty" yaml:"ttl,omitempty"`
 
