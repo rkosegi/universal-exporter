@@ -94,7 +94,7 @@ func (p *pipelineCollector) Collect(ch chan<- prometheus.Metric) {
 	p.lastErr.Set(0)
 	for k, v := range p.gc.Targets {
 		start := time.Now()
-		p.l.Info("Processing target", "name", k)
+		p.l.Debug("Processing target", "name", k, "steps", v.Steps)
 		po := &pipeline.PipelineOp{}
 		po.ActionSpec.Children = v.Steps
 
