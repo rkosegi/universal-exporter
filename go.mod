@@ -14,7 +14,7 @@
 
 module github.com/rkosegi/universal-exporter
 
-go 1.24.1
+go 1.24.2
 
 require (
 	github.com/alecthomas/kingpin/v2 v2.4.0
@@ -22,7 +22,8 @@ require (
 	github.com/prometheus/client_golang v1.22.0
 	github.com/prometheus/common v0.64.0
 	github.com/prometheus/exporter-toolkit v0.14.0
-	github.com/rkosegi/yaml-toolkit v1.0.65-0.20250614141445-71e1d5b4a05d
+	github.com/rkosegi/yaml-pipeline v0.0.0-20250621201747-ebce9553938f
+	github.com/rkosegi/yaml-toolkit v1.0.65
 	github.com/samber/lo v1.51.0
 )
 

@@ -23,8 +23,8 @@ import (
 	"github.com/prometheus/client_golang/prometheus"
 	"github.com/rkosegi/universal-exporter/pkg/internal/ops"
 	"github.com/rkosegi/universal-exporter/pkg/types"
+	"github.com/rkosegi/yaml-pipeline/pkg/pipeline"
 	"github.com/rkosegi/yaml-toolkit/dom"
-	"github.com/rkosegi/yaml-toolkit/pipeline"
 )
 
 type pipelineLogAdapter struct {

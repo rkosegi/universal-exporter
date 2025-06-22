@@ -16,7 +16,7 @@ limitations under the License.
 
 package services
 
-import "github.com/rkosegi/yaml-toolkit/pipeline"
+import "github.com/rkosegi/yaml-pipeline/pkg/pipeline"
 
 type noopService struct{}
 

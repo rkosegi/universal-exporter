@@ -23,7 +23,7 @@ import (
 	"time"
 
 	"github.com/prometheus/client_golang/prometheus"
-	"github.com/rkosegi/yaml-toolkit/pipeline"
+	"github.com/rkosegi/yaml-pipeline/pkg/pipeline"
 )
 
 // MetricOptsSpec is configuration that includes prometheus.Opts and label names
