@@ -24,9 +24,9 @@ import (
 	"net/http"
 
 	"github.com/rkosegi/universal-exporter/pkg/types"
+	"github.com/rkosegi/yaml-pipeline/pkg/pipeline"
+	te "github.com/rkosegi/yaml-pipeline/pkg/pipeline/template_engine"
 	"github.com/rkosegi/yaml-toolkit/dom"
-	"github.com/rkosegi/yaml-toolkit/pipeline"
-	te "github.com/rkosegi/yaml-toolkit/pipeline/template_engine"
 	"github.com/samber/lo"
 )
 
