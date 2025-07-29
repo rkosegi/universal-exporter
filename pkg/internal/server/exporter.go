@@ -75,7 +75,7 @@ func applyVars(kvs map[string]string, gd dom.ContainerBuilder) {
 
 func (p *pipelineCollector) Collect(ch chan<- prometheus.Metric) {
 	p.up.Set(1)
-	gd := dom.Builder().Container()
+	gd := dom.ContainerNode()
 	ex := pipeline.New(
 		pipeline.WithData(gd),
 		pipeline.WithListener(&pipelineLogAdapter{
