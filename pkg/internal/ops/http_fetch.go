@@ -67,7 +67,7 @@ func (h *httpFetchOp) String() string {
 }
 
 func (h *httpFetchOp) doWithResponse(ctx pipeline.ActionContext, resp *types.ParsedHttpResponse) error {
-	c := ctx.Factory().Container()
+	c := dom.ContainerNode()
 	c.AddValue("status", dom.LeafNode(resp.StatusCode))
 	c.AddValue("body", dom.LeafNode(string(resp.Body)))
 	hc := c.AddContainer("headers")
