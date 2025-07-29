@@ -59,8 +59,8 @@ github.com/prometheus/procfs v0.16.0 h1:xh6oHhKwnOJKMYiYBDWmkHqQPyiY40sny36Cmx2b
 github.com/prometheus/procfs v0.16.0/go.mod h1:8veyXUu3nGP7oaCxhX6yeaM5u4stL2FeMXnCqhDthZg=
 github.com/rkosegi/yaml-pipeline v0.0.0-20250621201747-ebce9553938f h1:aOUCJQPFHiAVgLFQqocoUpl14tQ2e8HjbU93oL3WlY8=
 github.com/rkosegi/yaml-pipeline v0.0.0-20250621201747-ebce9553938f/go.mod h1:E30uzQaK2JoywDCiOrF+40Z+DXZq3MrtVpsZ/gmpTXc=
-github.com/rkosegi/yaml-toolkit v1.0.65 h1:6njSvdfoEiMJBdLcOuD4TgFRkeYFmeYCf2DOeMnXszE=
-github.com/rkosegi/yaml-toolkit v1.0.65/go.mod h1:8/rgsOuwB7CwOwgVnAOJN/DvBHcg1nERK1917Hi8IhE=
+github.com/rkosegi/yaml-toolkit v1.0.66 h1:NoDzLh3Htv6Uqcr/FeLDKPgvI5+Ak4A4ddEtgOIBsCY=
+github.com/rkosegi/yaml-toolkit v1.0.66/go.mod h1:qu8qDPKfsC+i1SfaRgy/1q7DvO5zizkZBjOCbFas/HU=
 github.com/rogpeppe/go-internal v1.10.0 h1:TMyTOH3F/DB16zRVcYyreMH6GnZZrwQVAoYjRBZyWFQ=
 github.com/rogpeppe/go-internal v1.10.0/go.mod h1:UQnix2H7Ngw/k4C5ijL5+65zddjncjaFoBhdsK/akog=
 github.com/samber/lo v1.51.0 h1:kysRYLbHy/MB7kQZf5DSN50JHmMsNEdeY24VzJFu7wI=
