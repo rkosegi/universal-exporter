@@ -57,10 +57,10 @@ github.com/prometheus/exporter-toolkit v0.14.0 h1:NMlswfibpcZZ+H0sZBiTjrA3/aBFHk
 github.com/prometheus/exporter-toolkit v0.14.0/go.mod h1:Gu5LnVvt7Nr/oqTBUC23WILZepW0nffNo10XdhQcwWA=
 github.com/prometheus/procfs v0.16.1 h1:hZ15bTNuirocR6u0JZ6BAHHmwS1p8B4P6MRqxtzMyRg=
 github.com/prometheus/procfs v0.16.1/go.mod h1:teAbpZRB1iIAJYREa1LsoWUXykVXA1KlTmWl8x/U+Is=
-github.com/rkosegi/yaml-pipeline v0.0.0-20250725101343-9d46baa14c85 h1:xtRtW5Ybmqr//7smBOBMBkehqI5KLH38uVKQSyJVCnc=
-github.com/rkosegi/yaml-pipeline v0.0.0-20250725101343-9d46baa14c85/go.mod h1:PAW0TssqSvo4/yjAPW8W4PoiG7cjnywSUlHdk4F4Lck=
-github.com/rkosegi/yaml-toolkit v1.0.66 h1:NoDzLh3Htv6Uqcr/FeLDKPgvI5+Ak4A4ddEtgOIBsCY=
-github.com/rkosegi/yaml-toolkit v1.0.66/go.mod h1:qu8qDPKfsC+i1SfaRgy/1q7DvO5zizkZBjOCbFas/HU=
+github.com/rkosegi/yaml-pipeline v0.0.1 h1:0aVQB8BrE0hQokHGtbDCeXY818JXHVO19dRUmEh/PO0=
+github.com/rkosegi/yaml-pipeline v0.0.1/go.mod h1:ugzSGwSZ0uo0Hb9frUNAkR382Al3upZLaaVfTg5IQ2M=
+github.com/rkosegi/yaml-toolkit v1.0.67-0.20250802061906-849881e3e95e h1:QODbDqDZzUAfOJZMBF9nuh20Uy3/+O4wlkZsPuN0I3I=
+github.com/rkosegi/yaml-toolkit v1.0.67-0.20250802061906-849881e3e95e/go.mod h1:qu8qDPKfsC+i1SfaRgy/1q7DvO5zizkZBjOCbFas/HU=
 github.com/rogpeppe/go-internal v1.10.0 h1:TMyTOH3F/DB16zRVcYyreMH6GnZZrwQVAoYjRBZyWFQ=
 github.com/rogpeppe/go-internal v1.10.0/go.mod h1:UQnix2H7Ngw/k4C5ijL5+65zddjncjaFoBhdsK/akog=
 github.com/samber/lo v1.51.0 h1:kysRYLbHy/MB7kQZf5DSN50JHmMsNEdeY24VzJFu7wI=

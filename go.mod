@@ -22,8 +22,8 @@ require (
 	github.com/prometheus/client_golang v1.23.0
 	github.com/prometheus/common v0.65.0
 	github.com/prometheus/exporter-toolkit v0.14.0
-	github.com/rkosegi/yaml-pipeline v0.0.0-20250725101343-9d46baa14c85
-	github.com/rkosegi/yaml-toolkit v1.0.66
+	github.com/rkosegi/yaml-pipeline v0.0.1
+	github.com/rkosegi/yaml-toolkit v1.0.67-0.20250802061906-849881e3e95e
 	github.com/samber/lo v1.51.0
 )
 
