@@ -82,6 +82,7 @@ func (h *httpFetchOp) doWithResponse(ctx pipeline.ActionContext, resp *types.Par
 		}
 	}
 	ctx.Data().AddValueAt(h.StoreTo, c)
+	ctx.InvalidateSnapshot()
 	return nil
 }
 
