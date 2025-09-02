@@ -27,8 +27,11 @@ import (
 	"github.com/rkosegi/yaml-pipeline/pkg/pipeline"
 	te "github.com/rkosegi/yaml-pipeline/pkg/pipeline/template_engine"
 	"github.com/rkosegi/yaml-toolkit/dom"
+	"github.com/rkosegi/yaml-toolkit/props"
 	"github.com/samber/lo"
 )
+
+var pp = props.NewPathParser()
 
 func NewHttpFetch() pipeline.ActionFactory {
 	return &httpFetchOpFactory{}
@@ -75,13 +78,13 @@ func (h *httpFetchOp) doWithResponse(ctx pipeline.ActionContext, resp *types.Par
 		hc.AddValue(k, dom.LeafNode(v))
 	}
 	if h.ParseJson != nil && *h.ParseJson {
-		if jd, err := ctx.Factory().FromReader(bytes.NewReader(resp.Body), dom.DefaultJsonDecoder); err != nil {
+		if jd, err := dom.DecodeReader(bytes.NewReader(resp.Body), dom.DefaultJsonDecoder); err != nil {
 			return err
 		} else {
 			c.AddValue("json", jd)
 		}
 	}
-	ctx.Data().AddValueAt(h.StoreTo, c)
+	ctx.Data().Set(pp.MustParse(h.StoreTo), c)
 	ctx.InvalidateSnapshot()
 	return nil
 }

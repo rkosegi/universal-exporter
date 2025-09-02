@@ -25,7 +25,10 @@ import (
 	"github.com/rkosegi/universal-exporter/pkg/types"
 	"github.com/rkosegi/yaml-pipeline/pkg/pipeline"
 	"github.com/rkosegi/yaml-toolkit/dom"
+	"github.com/rkosegi/yaml-toolkit/props"
 )
+
+var pp = props.NewPathParser()
 
 type pipelineLogAdapter struct {
 	l  *slog.Logger
@@ -69,7 +72,7 @@ func (p *pipelineCollector) Describe(ch chan<- *prometheus.Desc) {
 
 func applyVars(kvs map[string]string, gd dom.ContainerBuilder) {
 	for k, v := range kvs {
-		gd.AddValueAt("vars."+k, dom.LeafNode(v))
+		gd.Set(pp.MustParse("vars."+k), dom.LeafNode(v))
 	}
 }
 
@@ -95,7 +98,7 @@ func (p *pipelineCollector) Collect(ch chan<- prometheus.Metric) {
 	for k, v := range p.gc.Targets {
 		start := time.Now()
 		p.l.Debug("Processing target", "name", k, "steps", v.Steps)
-		po := &pipeline.PipelineOp{}
+		po := &pipeline.PipelineSpec{}
 		po.ActionSpec.Children = v.Steps
 
 		// setup initial variables
