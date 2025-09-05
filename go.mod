@@ -19,7 +19,7 @@ go 1.25.0
 require (
 	github.com/alecthomas/kingpin/v2 v2.4.0
 	github.com/jellydator/ttlcache/v3 v3.4.0
-	github.com/prometheus/client_golang v1.23.0
+	github.com/prometheus/client_golang v1.23.1
 	github.com/prometheus/common v0.66.0
 	github.com/prometheus/exporter-toolkit v0.14.0
 	github.com/rkosegi/yaml-pipeline v0.0.3-0.20250905103348-8de47f43b2d1
