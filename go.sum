@@ -60,6 +60,10 @@ github.com/munnerz/goautoneg v0.0.0-20191010083416-a7dc8b61c822 h1:C3w9PqII01/Oq
 github.com/munnerz/goautoneg v0.0.0-20191010083416-a7dc8b61c822/go.mod h1:+n7T8mK8HuQTcFwEeznm/DIxMOiR9yIdICNftLE1DvQ=
 github.com/mwitkow/go-conntrack v0.0.0-20190716064945-2f068394615f h1:KUppIJq7/+SVif2QVs3tOP0zanoHgBEVAwHxUSIzRqU=
 github.com/mwitkow/go-conntrack v0.0.0-20190716064945-2f068394615f/go.mod h1:qRWi+5nqEBWmkhHvq77mSJWrCKwh8bxhgT7d/eI7P4U=
+github.com/otiai10/copy v1.14.1 h1:5/7E6qsUMBaH5AnQ0sSLzzTg1oTECmcCmT6lvF45Na8=
+github.com/otiai10/copy v1.14.1/go.mod h1:oQwrEDDOci3IM8dJF0d8+jnbfPDllW6vUjNc3DoZm9I=
+github.com/otiai10/mint v1.6.3 h1:87qsV/aw1F5as1eH1zS/yqHY85ANKVMgkDrf9rcxbQs=
+github.com/otiai10/mint v1.6.3/go.mod h1:MJm72SBthJjz8qhefc4z1PYEieWmy8Bku7CjcAqyUSM=
 github.com/pmezard/go-difflib v1.0.0 h1:4DBwDE0NGyQoBHbLQYPwSUPoCMWR5BEzIk/f1lZbAQM=
 github.com/pmezard/go-difflib v1.0.0/go.mod h1:iKH77koFhYxTK1pcRnkKkqfTogsbg7gZNVY4sRDYZ/4=
 github.com/prometheus/client_golang v1.23.2 h1:Je96obch5RDVy3FDMndoUsjAhG5Edi49h0RJWRi/o0o=
@@ -72,8 +76,8 @@ github.com/prometheus/exporter-toolkit v0.14.1 h1:uKPE4ewweVRWFainwvAcHs3uw15pjw
 github.com/prometheus/exporter-toolkit v0.14.1/go.mod h1:di7yaAJiaMkcjcz48f/u4yRPwtyuxTU5Jr4EnM2mhtQ=
 github.com/prometheus/procfs v0.16.1 h1:hZ15bTNuirocR6u0JZ6BAHHmwS1p8B4P6MRqxtzMyRg=
 github.com/prometheus/procfs v0.16.1/go.mod h1:teAbpZRB1iIAJYREa1LsoWUXykVXA1KlTmWl8x/U+Is=
-github.com/rkosegi/yaml-pipeline v0.0.3 h1:41LpVnWnqO6dZOMhWr8EWVAq6l2vlfAbsfwIryPlYGE=
-github.com/rkosegi/yaml-pipeline v0.0.3/go.mod h1:dJYTdL1of44lQxCMhoqqSeTUYxMp3FkAXr7/Xs1Pess=
+github.com/rkosegi/yaml-pipeline v0.0.4 h1:hRBdnTvteZ4ChtCUCVOtysohsds8lRKo7H6Bom8WQW0=
+github.com/rkosegi/yaml-pipeline v0.0.4/go.mod h1:PxEMz4gtAewW5NySSsaMw/7hAFY8e5UlSmslfISRdps=
 github.com/rkosegi/yaml-toolkit v1.0.67-0.20250905102113-b5a9975a887c h1:Kj0bH11LaPz6psauvYjE+0+WPaNs8/PSFrnP4JcxyFw=
 github.com/rkosegi/yaml-toolkit v1.0.67-0.20250905102113-b5a9975a887c/go.mod h1:1ZxQ6ozHBiMyLp7Ox6xZjrDNufx6dr48RwaAsu8rg8A=
 github.com/rogpeppe/go-internal v1.10.0 h1:TMyTOH3F/DB16zRVcYyreMH6GnZZrwQVAoYjRBZyWFQ=
