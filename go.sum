@@ -76,8 +76,8 @@ github.com/prometheus/exporter-toolkit v0.14.1 h1:uKPE4ewweVRWFainwvAcHs3uw15pjw
 github.com/prometheus/exporter-toolkit v0.14.1/go.mod h1:di7yaAJiaMkcjcz48f/u4yRPwtyuxTU5Jr4EnM2mhtQ=
 github.com/prometheus/procfs v0.16.1 h1:hZ15bTNuirocR6u0JZ6BAHHmwS1p8B4P6MRqxtzMyRg=
 github.com/prometheus/procfs v0.16.1/go.mod h1:teAbpZRB1iIAJYREa1LsoWUXykVXA1KlTmWl8x/U+Is=
-github.com/rkosegi/yaml-pipeline v0.0.4 h1:hRBdnTvteZ4ChtCUCVOtysohsds8lRKo7H6Bom8WQW0=
-github.com/rkosegi/yaml-pipeline v0.0.4/go.mod h1:PxEMz4gtAewW5NySSsaMw/7hAFY8e5UlSmslfISRdps=
+github.com/rkosegi/yaml-pipeline v0.0.5 h1:Z4C6mY/D3sJCyk3/VY9wBs9IpoDsCEAAMdTe7C0RBwM=
+github.com/rkosegi/yaml-pipeline v0.0.5/go.mod h1:ADI0ccYvR7qoTBSO19PgliZ275gKvD91nbwQ4aSWSZo=
 github.com/rkosegi/yaml-toolkit v1.0.67-0.20250905102113-b5a9975a887c h1:Kj0bH11LaPz6psauvYjE+0+WPaNs8/PSFrnP4JcxyFw=
 github.com/rkosegi/yaml-toolkit v1.0.67-0.20250905102113-b5a9975a887c/go.mod h1:1ZxQ6ozHBiMyLp7Ox6xZjrDNufx6dr48RwaAsu8rg8A=
 github.com/rogpeppe/go-internal v1.10.0 h1:TMyTOH3F/DB16zRVcYyreMH6GnZZrwQVAoYjRBZyWFQ=
