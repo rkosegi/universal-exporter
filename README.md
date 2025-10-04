@@ -157,7 +157,7 @@ targets:
       002-fetch:
         order: 2
         ext:
-          func: http_fetch
+          function: http_fetch
           args:
             url: https://api.open-meteo.com/v1/forecast?latitude={{ .vars.latitude }}&longitude={{ .vars.longitude }}&current=temperature_2m,relative_humidity_2m,apparent_temperature,is_day,precipitation,rain,showers,snowfall,weather_code,cloud_cover,pressure_msl,surface_pressure,wind_speed_10m,wind_direction_10m,wind_gusts_10m
             headers:
@@ -173,7 +173,7 @@ targets:
               01-set-metric:
                 order: 1
                 ext:
-                  func: prom_gauge
+                  function: prom_gauge
                   args:
                     value: '{{ printf "{{ .openmeteo.Response.json.%s }}" .forEach.path }}'
                     ref: '{{ .forEach.metric }}'
@@ -389,7 +389,7 @@ targets:
       003-fetch:
         order: 3
         ext:
-          func: http_fetch
+          function: http_fetch
           args:
             url: https://api.openweathermap.org/data/2.5/weather?lat={{ .vars.latitude }}&lon={{ .vars.longitude }}&units=metric&appid={{ .Env.OWM_API_KEY }}
             headers:
@@ -405,7 +405,7 @@ targets:
               01-set-metric:
                 order: 1
                 ext:
-                  func: prom_gauge
+                  function: prom_gauge
                   args:
                     value: '{{ printf "{{ .Result.OWM.RAW.json.%s }}" .forEach.path }}'
                     ref: '{{ .forEach.metric }}'
