@@ -158,11 +158,9 @@ type simpleActionFactoryImpl[T any] struct {
 }
 
 func (s *simpleActionFactoryImpl[T]) ForArgs(ctx pipeline.ClientContext, args pipeline.StrKeysAnyValues) pipeline.Action {
-	var t *T
-	t = s.fn()
+	t := s.fn()
 	pipeline.ApplyArgs(ctx, t, args)
-	var x interface{}
-	x = t
+	var x interface{} = t
 	return x.(pipeline.Action)
 }
 

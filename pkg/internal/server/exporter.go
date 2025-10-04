@@ -99,7 +99,7 @@ func (p *pipelineCollector) Collect(ch chan<- prometheus.Metric) {
 		start := time.Now()
 		p.l.Debug("Processing target", "name", k, "steps", v.Steps)
 		po := &pipeline.PipelineSpec{}
-		po.ActionSpec.Children = v.Steps
+		po.Children = v.Steps
 
 		// setup initial variables
 		applyVars(p.gc.Vars, gd)
