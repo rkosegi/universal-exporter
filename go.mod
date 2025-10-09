@@ -22,9 +22,9 @@ require (
 	github.com/prometheus/client_golang v1.23.2
 	github.com/prometheus/common v0.67.1
 	github.com/prometheus/exporter-toolkit v0.14.1
-	github.com/rkosegi/yaml-pipeline v0.0.6
+	github.com/rkosegi/yaml-pipeline v0.0.7
 	github.com/rkosegi/yaml-toolkit v1.0.67
-	github.com/samber/lo v1.51.0
+	github.com/samber/lo v1.52.0
 )
 
 require (
@@ -60,7 +60,7 @@ require (
 	github.com/xhit/go-str2duration/v2 v2.1.0 // indirect
 	go.yaml.in/yaml/v2 v2.4.3 // indirect
 	golang.org/x/crypto v0.42.0 // indirect
-	golang.org/x/net v0.44.0 // indirect
+	golang.org/x/net v0.45.0 // indirect
 	golang.org/x/oauth2 v0.31.0 // indirect
 	golang.org/x/sync v0.17.0 // indirect
 	golang.org/x/sys v0.36.0 // indirect
