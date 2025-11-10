@@ -21,7 +21,7 @@ repos:
       - id: end-of-file-fixer
       - id: mixed-line-ending
   - repo: https://github.com/tekwizely/pre-commit-golang
-    rev: v1.0.0-rc.2
+    rev: v1.0.0-rc.4
     hooks:
       - id: go-mod-tidy
       - id: go-fmt
