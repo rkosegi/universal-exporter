@@ -86,8 +86,8 @@ github.com/rkosegi/go-korek v1.0.0-rc1.0.20251003141511-7c8a34d4a5f5 h1:ZmF0YEUV
 github.com/rkosegi/go-korek v1.0.0-rc1.0.20251003141511-7c8a34d4a5f5/go.mod h1:UgdsNXqxC66LtaR2qEOpXMRYxIT/cu+DrTowSwITPPM=
 github.com/rkosegi/yaml-pipeline v0.0.8 h1:RQRdCKoLonml5gpYsvh1ZbxfgvJLIH5uL1u4Z/CjEjo=
 github.com/rkosegi/yaml-pipeline v0.0.8/go.mod h1:OpSQzln9lEY0mHWgSHgfQOX2OYELiHyWX2CA83b8h9M=
-github.com/rkosegi/yaml-toolkit v1.0.67 h1:vAKjDEjx04qZ7xuCuBj/Jf9wyc2Qflc87JczG5cwCaA=
-github.com/rkosegi/yaml-toolkit v1.0.67/go.mod h1:89EAnTqPQuNmEV7sFkDE2rXjlpKvdO/HFqCXnWoI0ag=
+github.com/rkosegi/yaml-toolkit v1.0.68 h1:H2bSFl0zkIWdcfP7X/7qTc927h42d1xbfVGdbF6nkPw=
+github.com/rkosegi/yaml-toolkit v1.0.68/go.mod h1:U97Vho/AcTapnneTGMHGBdB5X9IF7rNXbb/UraYqKfY=
 github.com/rogpeppe/go-internal v1.10.0 h1:TMyTOH3F/DB16zRVcYyreMH6GnZZrwQVAoYjRBZyWFQ=
 github.com/rogpeppe/go-internal v1.10.0/go.mod h1:UQnix2H7Ngw/k4C5ijL5+65zddjncjaFoBhdsK/akog=
 github.com/samber/lo v1.52.0 h1:Rvi+3BFHES3A8meP33VPAxiBZX/Aws5RxrschYGjomw=
