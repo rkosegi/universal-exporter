@@ -24,7 +24,7 @@ require (
 	github.com/prometheus/exporter-toolkit v0.15.1
 	github.com/rkosegi/yaml-pipeline v0.0.8
 	github.com/rkosegi/yaml-toolkit v1.0.68
-	github.com/samber/lo v1.52.0
+	github.com/samber/lo v1.53.0
 )
 
 require (
