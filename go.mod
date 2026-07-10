@@ -20,7 +20,7 @@ require (
 	github.com/alecthomas/kingpin/v2 v2.4.0
 	github.com/jellydator/ttlcache/v3 v3.4.1
 	github.com/prometheus/client_golang v1.23.2
-	github.com/prometheus/common v0.69.0
+	github.com/prometheus/common v0.70.0
 	github.com/prometheus/exporter-toolkit v0.17.1
 	github.com/rkosegi/yaml-pipeline v0.0.10
 	github.com/rkosegi/yaml-toolkit v1.0.68
@@ -56,7 +56,7 @@ require (
 	github.com/otiai10/copy v1.14.1 // indirect
 	github.com/otiai10/mint v1.6.3 // indirect
 	github.com/prometheus/client_model v0.6.2 // indirect
-	github.com/prometheus/procfs v0.16.1 // indirect
+	github.com/prometheus/procfs v0.21.0 // indirect
 	github.com/shopspring/decimal v1.4.0 // indirect
 	github.com/spf13/cast v1.10.0 // indirect
 	github.com/xhit/go-str2duration/v2 v2.1.0 // indirect
