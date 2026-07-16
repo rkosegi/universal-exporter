@@ -82,12 +82,12 @@ github.com/prometheus/exporter-toolkit v0.17.1 h1:psKN4wM7shBL/BxZkDHgm6YZJ3fAVG
 github.com/prometheus/exporter-toolkit v0.17.1/go.mod h1:dabwPJvxsC5+tsp2iolQrqBWZh+QlISKlYRpj9Hh5xk=
 github.com/prometheus/procfs v0.21.0 h1:Qh/e6TlBjZf+XLLqNCqFGmCU6Kj/2Bu7kj3oAc0UnXc=
 github.com/prometheus/procfs v0.21.0/go.mod h1:aB55Cww9pdSJVHk0hUf0inxWyyjPogFIjmHKYgMKmtY=
-github.com/rkosegi/go-korek v1.0.0-rc1.0.20251003141511-7c8a34d4a5f5 h1:ZmF0YEUV1qpSV3wvItNerkUZnwCExUROb3WdFumHeFE=
-github.com/rkosegi/go-korek v1.0.0-rc1.0.20251003141511-7c8a34d4a5f5/go.mod h1:UgdsNXqxC66LtaR2qEOpXMRYxIT/cu+DrTowSwITPPM=
+github.com/rkosegi/go-korek v1.0.0-rc1.0.20260703141920-7cef6f25883b h1:msbgB+hffHkl0hgjkiJ1qU/0ReXfo7W+BeuaJAD9nM4=
+github.com/rkosegi/go-korek v1.0.0-rc1.0.20260703141920-7cef6f25883b/go.mod h1:UgdsNXqxC66LtaR2qEOpXMRYxIT/cu+DrTowSwITPPM=
 github.com/rkosegi/yaml-pipeline v0.0.10 h1:MCr3nnXfqttjNMkxuFjKuQF5Lvu/gcOWyFDP2c1d6HQ=
 github.com/rkosegi/yaml-pipeline v0.0.10/go.mod h1:PKFRdyJX+OwrSZXEoYLZt+k7JgNe5MP1CYFpA2obqE0=
-github.com/rkosegi/yaml-toolkit v1.0.68 h1:H2bSFl0zkIWdcfP7X/7qTc927h42d1xbfVGdbF6nkPw=
-github.com/rkosegi/yaml-toolkit v1.0.68/go.mod h1:U97Vho/AcTapnneTGMHGBdB5X9IF7rNXbb/UraYqKfY=
+github.com/rkosegi/yaml-toolkit v1.0.69 h1:a1RlMcofmFi5kbOcxPkLFTlF9a4+5HcEENZ5PXJOWYI=
+github.com/rkosegi/yaml-toolkit v1.0.69/go.mod h1:IDi8JcHc01plFY+Wi5BvmMxWpZjHFRzFPw1y7D/gfQg=
 github.com/rogpeppe/go-internal v1.9.0 h1:73kH8U+JUqXU8lRuOHeVHaa/SZPifC7BkcraZVejAe8=
 github.com/rogpeppe/go-internal v1.9.0/go.mod h1:WtVeX8xhTBvf0smdhujwtBcq4Qrzq/fJaraNFVN+nFs=
 github.com/samber/lo v1.53.0 h1:t975lj2py4kJPQ6haz1QMgtId2gtmfktACxIXArw3HM=
