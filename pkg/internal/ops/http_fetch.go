@@ -28,7 +28,6 @@ import (
 	te "github.com/rkosegi/yaml-pipeline/pkg/pipeline/template_engine"
 	"github.com/rkosegi/yaml-toolkit/dom"
 	"github.com/rkosegi/yaml-toolkit/props"
-	"github.com/samber/lo"
 )
 
 var pp = props.NewPathParser()
@@ -138,7 +137,7 @@ func (h *httpFetchOp) Do(ctx pipeline.ActionContext) error {
 func (h *httpFetchOp) CloneWith(ctx pipeline.ActionContext) pipeline.Action {
 	ss := ctx.Snapshot()
 	return &httpFetchOp{
-		Method:  lo.ToPtr(ctx.TemplateEngine().RenderLenient(strOrDef(h.Method, http.MethodGet), ss)),
+		Method:  new(ctx.TemplateEngine().RenderLenient(strOrDef(h.Method, http.MethodGet), ss)),
 		Url:     ctx.TemplateEngine().RenderLenient(h.Url, ss),
 		Headers: renderMapStrStr(h.Headers, ctx.TemplateEngine(), ss),
 	}

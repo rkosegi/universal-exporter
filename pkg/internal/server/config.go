@@ -21,40 +21,39 @@ import (
 
 	"github.com/prometheus/common/version"
 	"github.com/rkosegi/universal-exporter/pkg/types"
-	"github.com/samber/lo"
 )
 
 func DefaultConfig() *types.Config {
 	return &types.Config{
 		HttpClient: &types.HttpClientServiceConfig{
-			Timeout: lo.ToPtr(time.Second * 15),
+			Timeout: new(time.Second * 15),
 			Instrumentation: &types.InstrumentationConfigFragment{
-				Enabled: lo.ToPtr(true),
-				Prefix:  lo.ToPtr(types.PromNamespace),
+				Enabled: new(true),
+				Prefix:  new(types.PromNamespace),
 			},
 			Cache: &types.CacheConfig{
-				Enabled:  lo.ToPtr(true),
-				TTL:      lo.ToPtr(types.DefaultCacheTTL),
-				Capacity: lo.ToPtr(types.DefaultCacheCapacity),
+				Enabled:  new(true),
+				TTL:      new(types.DefaultCacheTTL),
+				Capacity: new(types.DefaultCacheCapacity),
 				Instrumentation: &types.InstrumentationConfigFragment{
-					Enabled: lo.ToPtr(true),
-					Prefix:  lo.ToPtr(types.DefaultMetricPrefixHttpCache),
+					Enabled: new(true),
+					Prefix:  new(types.DefaultMetricPrefixHttpCache),
 				},
 			},
 		},
 		Server: &types.ServerConfig{
-			HealthEndpoint: lo.ToPtr(types.DefaultHealthEndpoint),
-			MetricsPath:    lo.ToPtr(types.DefaultMetricsEndpoint),
+			HealthEndpoint: new(types.DefaultHealthEndpoint),
+			MetricsPath:    new(types.DefaultMetricsEndpoint),
 		},
 		Vars: map[string]string{
 			"Version": version.GetRevision(),
 		},
 		DefaultExporters: &types.DefaultExportersConfig{
-			BuildInfo:             lo.ToPtr(true),
-			Version:               lo.ToPtr(true),
-			Process:               lo.ToPtr(true),
-			Go:                    lo.ToPtr(true),
-			InstrumentHttpHandler: lo.ToPtr(true),
+			BuildInfo:             new(true),
+			Version:               new(true),
+			Process:               new(true),
+			Go:                    new(true),
+			InstrumentHttpHandler: new(true),
 		},
 	}
 }

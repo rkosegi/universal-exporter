@@ -22,7 +22,6 @@ import (
 
 	"github.com/prometheus/client_golang/prometheus"
 	"github.com/rkosegi/universal-exporter/pkg/types"
-	"github.com/samber/lo"
 )
 
 func NewMetricService(mos map[string]*types.MetricOptsSpec, l *slog.Logger) types.MetricService {
@@ -64,7 +63,7 @@ func (ms *promMetricService) Start() error {
 	for name, opt := range ms.mos {
 		opt.Name = name
 		if opt.Type == nil {
-			opt.Type = lo.ToPtr("gauge")
+			opt.Type = new("gauge")
 		}
 		ms.l.Info("Registering metric", "metric_opt", *opt)
 		switch *opt.Type {

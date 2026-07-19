@@ -24,7 +24,6 @@ require (
 	github.com/prometheus/exporter-toolkit v0.17.1
 	github.com/rkosegi/yaml-pipeline v0.0.10
 	github.com/rkosegi/yaml-toolkit v1.0.69
-	github.com/samber/lo v1.53.0
 )
 
 require (
@@ -57,6 +56,7 @@ require (
 	github.com/otiai10/mint v1.6.3 // indirect
 	github.com/prometheus/client_model v0.6.2 // indirect
 	github.com/prometheus/procfs v0.21.0 // indirect
+	github.com/samber/lo v1.53.0 // indirect
 	github.com/shopspring/decimal v1.4.0 // indirect
 	github.com/spf13/cast v1.10.0 // indirect
 	github.com/xhit/go-str2duration/v2 v2.1.0 // indirect
