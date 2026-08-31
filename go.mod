@@ -21,7 +21,7 @@ require (
 	github.com/jellydator/ttlcache/v3 v3.4.1
 	github.com/prometheus/client_golang v1.24.1
 	github.com/prometheus/common v0.70.1
-	github.com/prometheus/exporter-toolkit v0.18.0
+	github.com/prometheus/exporter-toolkit v0.19.0
 	github.com/rkosegi/yaml-pipeline v0.0.10
 	github.com/rkosegi/yaml-toolkit v1.0.69
 )
