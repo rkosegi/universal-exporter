@@ -23,7 +23,7 @@ require (
 	github.com/prometheus/common v0.74.0
 	github.com/prometheus/exporter-toolkit v0.20.0
 	github.com/rkosegi/yaml-pipeline v0.0.12
-	github.com/rkosegi/yaml-toolkit v1.0.70-0.20261104090139-8bd6ee9516f4
+	github.com/rkosegi/yaml-toolkit v1.0.70
 )
 
 require (
@@ -45,7 +45,7 @@ require (
 	github.com/huandu/xstrings v1.5.0 // indirect
 	github.com/inhies/go-bytesize v0.0.0-20220417184213-4913239db9cf // indirect
 	github.com/jpillora/backoff v1.0.0 // indirect
-	github.com/magiconair/properties v1.18.12 // indirect
+	github.com/magiconair/properties v1.18.13 // indirect
 	github.com/mdlayher/socket v0.6.0 // indirect
 	github.com/mdlayher/vsock v1.3.0 // indirect
 	github.com/mitchellh/copystructure v1.2.0 // indirect
@@ -62,7 +62,7 @@ require (
 	github.com/spf13/cast v1.10.0 // indirect
 	github.com/xhit/go-str2duration/v2 v2.1.0 // indirect
 	go.yaml.in/yaml/v2 v2.4.5 // indirect
-	go.yaml.in/yaml/v4 v4.0.0-rc.9 // indirect
+	go.yaml.in/yaml/v4 v4.0.0 // indirect
 	golang.org/x/crypto v0.58.0 // indirect
 	golang.org/x/net v0.62.0 // indirect
 	golang.org/x/oauth2 v0.38.0 // indirect
